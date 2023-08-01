@@ -1,0 +1,23 @@
+<mat-toolbar style=" display:flex;
+                    justify-content: space-between;" >
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button> -->
+    <span style="font-size: larger;
+    font-style: italic;
+    font-family: system-ui;">Compra-Gamer</span>
+    <span class="example-spacer"></span>
+<div>
+    <button mat-icon-button  (click)="signUp()" *ngIf="mostrar" class="example-icon " aria-label="Example icon-button with heart icon">
+        <mat-icon>person_add</mat-icon>
+    </button>
+    <button mat-icon-button  (click)="logIn()" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>login</mat-icon>
+    </button>
+    <button mat-icon-button  (click)="logOut()" *ngIf="mostrar" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>logout</mat-icon>
+    </button>
+</div>
+</mat-toolbar>
+  
+<router-outlet></router-outlet>

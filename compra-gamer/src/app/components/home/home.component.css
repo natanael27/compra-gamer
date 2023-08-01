@@ -1,0 +1,9 @@
+.productos-container {
+    display: flex;
+    justify-content: center;
+   flex-wrap: wrap;
+  }
+
+  .ancho-btn{
+    width: 100%
+  }
