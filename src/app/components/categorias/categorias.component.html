@@ -1,0 +1,8 @@
+<button mat-button class="background-orange" [matMenuTriggerFor]="menu"> Ver Categorias</button>
+<mat-menu #menu="matMenu">
+    <div *ngFor="let categoria of categorias">
+  <button mat-menu-item (click)="selectCategoria(categoria)">{{categoria.nombre}}</button>
+</div>
+</mat-menu>
+
+<p style="color: aliceblue;">categorias works!</p>

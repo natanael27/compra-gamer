@@ -1,0 +1,18 @@
+
+.body {
+    display: flex;
+    justify-content: space-around;
+    width: 917px;
+    height: 100%;
+    align-items: flex-start;
+    background-color: darkgray;
+    margin-left: 200px
+   
+}
+
+.login{
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+
+}

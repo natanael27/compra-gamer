@@ -1,0 +1,9 @@
+.contenedor{
+    background-color: rgb(223, 195, 163);
+    height: 400px;
+    width: 340px;
+    margin-left: 20px;
+    border-radius: 2%;
+    overflow-y: auto;
+     max-height: 400px;
+}

@@ -1,0 +1,77 @@
+<div  *ngIf="!filtro">
+    <app-categorias></app-categorias>  
+</div>
+
+<div style="display: flex; margin-top: 0px; ">
+   
+    <div class="productos-container" style="width: 70%; height:500px; overflow-y:auto; max-height: 450px;"
+    *ngIf="!filtro"
+    > 
+        <ul *ngFor="let prod of products">
+            <mat-card [ngStyle]="{'width':'400px','height':'300px'}">
+                <mat-card-content fxLayout="row">
+                    <!--titulo prod-->
+                    <mat-card-header style="background-color:rgb(46, 46, 46); width: 90%;">
+                        <mat-card-subtitle Style="color:white;" >
+                            {{prod.nombre}}
+                            <br>
+                            <!--subcategoria-->
+                            <p [ngStyle]="{'color':'white'}" >
+                            subcat${{prod.precio}}
+                            </p>
+                        </mat-card-subtitle>
+                       
+                    </mat-card-header>
+                    <br>
+                    <div class="elems" style="display: flex;
+                    justify-content: center;">
+                        <!--imagen prod-->
+                        <div>
+                            <img mat-card-image src="{{url_key}}{{prod.imagenes[0].nombre}}{{med}}" alt="" style="width: 120px;border-radius:5%;">
+                        </div>
+                        <br>
+                        <!--precio prod-->
+                        <div Style="color:white; margin-left: 10px;" >
+                            Precio: ${{prod.precio}}
+                        </div>
+                    </div>
+                    <br>
+                    <!--boton-->
+                    <div>
+                        <button mat-raised-button  color="warn" style="width:100%;" (click)="agregarProducto(prod)"> agregar</button>
+                    </div>
+                </mat-card-content>
+
+            </mat-card>
+        </ul>
+    </div>
+    <div class="contenedor-prod-filtrados" *ngIf="filtro" style="width: -webkit-fill-available;">
+        <app-prod-filtrados></app-prod-filtrados>
+    </div>
+    <div *ngIf="!filtro" style="width: 350px;
+                margin-left: 20px;
+                ">
+            <div style="display: inline-flex;
+            justify-content: center;
+            width: 350px;">
+                <div style="width:50px;">
+                    <mat-icon class="icono-carrito"> shopping_cart</mat-icon>
+                    <mat-badge class="cantidad-productos" matBadge="{{carritoCont}}" matBadgeSize="small" matBadgeColor="warn"></mat-badge>
+                </div >
+                <div>
+                    <button mat-raised-button color="warn" (click)="vaciarCarrito()"> Vaciar Carrito</button>
+                </div>
+            </div>
+            <div style="margin-top: 10px;">
+                <app-lista-compras></app-lista-compras>
+            </div>
+
+    </div>
+    
+</div>
+
+
+
+<!--<p>home works!</p>-->
+
+

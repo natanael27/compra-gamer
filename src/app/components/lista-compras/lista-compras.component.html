@@ -1,0 +1,16 @@
+<div class="contenedor">
+    <div>
+        <h1 style="margin-left: 10px;
+                    margin-top: 5px;
+                    max-height: 15px;">Lista de Compras</h1>
+    </div>
+    <hr>
+    <ul *ngFor="let prod of productos">
+        <p style="background-color: aliceblue; width: 90%; border-radius: 2%;">{{prod.nombre}}
+            <br>
+          precio:  ${{prod.precio}}</p>
+        
+    </ul>
+    
+</div>
+
