@@ -1,0 +1,23 @@
+<div class="body">
+    <div class="login">
+        <mat-spinner *ngIf="loading" diameter="50" style="margin: 0 auto;"></mat-spinner>
+        <form  *ngIf="!loading" [formGroup]="form" (ngSubmit)="ingresar()">
+            <h1>Registro de Usuarios</h1>
+    <hr>
+    <br>
+    <mat-form-field style="width: 80%;">
+        <mat-label>Usuario</mat-label>
+        <input type="text" matInput formControlName="usuario">
+      </mat-form-field>
+      <mat-form-field style="width: 80%;">
+        <mat-label>Contraseña</mat-label>
+        <input type="password" matInput formControlName="password">
+      </mat-form-field>
+      <br>
+      <button type="submit" mat-raised-button color="warn" style="width: 80%; height: 50px;" [disabled]="form.invalid">Aceptar</button>
+        </form>
+    
+      
+    </div>
+</div>
+
